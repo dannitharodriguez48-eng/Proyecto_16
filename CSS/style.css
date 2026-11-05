@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 420px;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+h1 {
+    margin-bottom: 8px;
+    font-size: 25px;
+    color: #a82030;
+}
+
+.descripcion {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.desplegable {
+    position: relative;
+    width: 100%;
+}
+
+.boton {
+    width: 100%;
+    padding: 13px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: 2px solid #b32636;
+    border-radius: 8px;
+    color: #333;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #fff7f7;
+}
+
+.boton:focus-visible,
+.lista li:focus-visible {
+    outline: 2px solid #b32636;
+    outline-offset: 2px;
+}
+
+.flecha {
+    width: 9px;
+    height: 9px;
+    margin-right: 3px;
+    border-right: 2px solid #b32636;
+    border-bottom: 2px solid #b32636;
+    transform: rotate(45deg);
+}
+
+.boton.abierto .flecha {
+    transform: rotate(225deg);
+}
+
+.lista {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    background-color: white;
+    border: 1px solid #d9a0a6;
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.lista.abierta {
+    display: block;
+}
+
+.lista li {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.lista li:last-child {
+    border-bottom: none;
+}
+
+.lista li:hover {
+    background-color: #fff0f1;
+}
+
+.lista li.seleccionado {
+    background-color: #f9e1e3;
+    color: #a82030;
+    font-weight: bold;
+}
+
+.lista li.seleccionado::after {
+    content: "✓";
+    float: right;
+    color: #a82030;
+}
+
+@media (max-width: 480px) {
+    .contenedor {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}

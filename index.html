@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú desplegable</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Selector de temas</h1>
+        <p class="descripcion">Escoge una categoría de desarrollo web.</p>
+
+        <div class="desplegable" id="desplegable">
+            <button type="button" class="boton" id="boton"
+                aria-haspopup="listbox" aria-expanded="false">
+                <span id="texto">Selecciona una categoría</span>
+                <span class="flecha" aria-hidden="true"></span>
+            </button>
+
+            <ul class="lista" id="lista" role="listbox" aria-label="Categorías">
+                <li role="option" aria-selected="false" tabindex="0">Diseño web</li>
+                <li role="option" aria-selected="false" tabindex="0">Programación</li>
+                <li role="option" aria-selected="false" tabindex="0">Bases de datos</li>
+                <li role="option" aria-selected="false" tabindex="0">Desarrollo móvil</li>
+                <li role="option" aria-selected="false" tabindex="0">Videojuegos</li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="js.js"></script>
+</body>
+</html>
